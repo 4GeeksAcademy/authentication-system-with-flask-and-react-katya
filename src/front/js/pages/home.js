@@ -56,8 +56,11 @@ export const Home = () => {
           >
             <div className="accordion-body">
               After you fill out your email and password, you will be redirected
-              to the private dashboard after a successful authentication. If you
-              already have a user, follow <a href="https://special-journey-5gq9ppq7vxgw3vg9v-3000.app.github.dev/login">this link</a>
+              to the personal infromation dashboard after a successful
+              authentication. If you already have a user, follow{" "}
+              <a href="https://special-journey-5gq9ppq7vxgw3vg9v-3000.app.github.dev/login">
+                this link to login.
+              </a>
             </div>
           </div>
         </div>
@@ -71,7 +74,7 @@ export const Home = () => {
               aria-expanded="false"
               aria-controls="panelsStayOpen-collapseThree"
             >
-              Logout
+              Personal Information
             </button>
           </h2>
           <div
@@ -79,8 +82,36 @@ export const Home = () => {
             className="accordion-collapse collapse"
           >
             <div className="accordion-body">
-              At any moment you can press "logout" in the navbar to finish the session, then you will
-              get redirected back to the login path.
+              In case your user is confirmed as valid, you will be able to see
+              personal information dashboard. If you are already logged in, you
+              can follow{" "}
+              <a href="https://special-journey-5gq9ppq7vxgw3vg9v-3000.app.github.dev/private">
+                this link
+              </a>{" "}
+              to see your personal information.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour"
+            >
+              Logout
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour"
+            className="accordion-collapse collapse"
+          >
+            <div className="accordion-body">
+              At any moment you can press "logout" in the navbar to finish the
+              session, then you will get redirected back to the login path.
             </div>
           </div>
         </div>

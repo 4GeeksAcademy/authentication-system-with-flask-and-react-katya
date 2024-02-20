@@ -1,28 +1,34 @@
 import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 
-export const Private = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
 
-	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
-			<img src={rigoImageUrl} />
-			<hr className="my-4" />
+export const Private = () => {
+  const { store, actions } = useContext(Context);
 
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
-		</div>
-	);
-};
-
-Private.propTypes = {
-	match: PropTypes.object
+  return (
+    <div className="container-fluid justify-content-center mt-4 w-25">
+      <h4 className="text-info my-4 text-center">Personal Information</h4>
+      <ul className="list-group">
+        <li className="p-3 list-group-item list-group-item-action list-group-item-light d-flex flex-row">
+          <strong className="text-info text-opacity-75 me-1">Email:</strong>
+          email@example.com
+          <div className="d-flex w-100 justify-content-end">
+            <i className="fa-solid fa-pencil text-info text-opacity-50"></i>
+          </div>
+        </li>
+        <li className="p-3 list-group-item list-group-item-action list-group-item-light d-flex flex-row">
+          <strong className="text-info text-opacity-75 me-1">Password:</strong>
+          *******
+          <div className="d-flex w-100 justify-content-end">
+            <i className="fa-solid fa-pencil text-info text-opacity-50"></i>
+          </div>
+        </li>
+        <li className="p-3 list-group-item list-group-item-action list-group-item-light">
+          <strong className="text-info text-opacity-75">Active since:</strong>{" "}
+          19.02.2024
+        </li>
+      </ul>
+    </div>
+  );
 };
